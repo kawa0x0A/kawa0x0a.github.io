@@ -6,6 +6,25 @@
   <title>kawa0x0A Tools</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <meta name="theme-color" content="#0f172a">
+
+  <link rel="manifest" href="manifest.json">
+
+  <link rel="icon" href="https://github.com/kawa0x0A.png">
+
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="kawa0x0A Tools">
+
+<meta name="description" content="kawa0x0Aが公開しているWebツール集">
+
+  <meta property="og:title" content="kawa0x0A Tools">
+  <meta property="og:description" content="AI・Developer・Utilityツールを公開しています。">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://github.com/kawa0x0A.png">
+  <meta property="og:url" content="https://kawa0x0a.github.io/">
 </head>
 
 <body class="bg-slate-50 text-slate-800">
@@ -223,6 +242,19 @@
       © 2026 kawa0x0A · Built with Tailwind CSS
     </div>
   </footer>
+
+  <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', async () => {
+      try {
+        await navigator.serviceWorker.register('./sw.js');
+        console.log('Service Worker registered');
+      } catch (err) {
+        console.error(err);
+      }
+    });
+  }
+  </script>
 
 </body>
 </html>
