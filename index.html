@@ -1,260 +1,192 @@
 <!DOCTYPE html>
 <html lang="ja" class="scroll-smooth">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>kawa0x0A Tools</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kawa0x0A Tools</title>
 
-  <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <meta name="theme-color" content="#0f172a">
+    <meta name="theme-color" content="#0f172a" />
 
-  <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="manifest.json" />
 
-  <link rel="icon" href="https://github.com/kawa0x0A.png">
+    <link rel="icon" href="https://github.com/kawa0x0A.png" />
 
-  <link rel="apple-touch-icon" href="icons/icon-192.png">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <meta name="apple-mobile-web-app-title" content="kawa0x0A Tools">
+    <link rel="apple-touch-icon" href="icons/icon-192.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="kawa0x0A Tools" />
 
-<meta name="description" content="kawa0x0Aが公開しているWebツール集">
+    <meta name="description" content="kawa0x0Aが公開しているWebツール集" />
 
-  <meta property="og:title" content="kawa0x0A Tools">
-  <meta property="og:description" content="AI・Developer・Utilityツールを公開しています。">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://github.com/kawa0x0A.png">
-  <meta property="og:url" content="https://kawa0x0a.github.io/">
-</head>
+    <meta property="og:title" content="kawa0x0A Tools" />
+    <meta property="og:description" content="AI・Developer・Utilityツールを公開しています。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://github.com/kawa0x0A.png" />
+    <meta property="og:url" content="https://kawa0x0a.github.io/" />
+  </head>
 
-<body class="bg-slate-50 text-slate-800">
+  <body class="bg-slate-50 text-slate-800">
+    <!-- Header -->
+    <header class="border-b bg-white/80 backdrop-blur sticky top-0 z-50">
+      <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+        <div>
+          <h1 class="text-2xl font-bold">🛠️ kawa0x0A Tools</h1>
+          <p class="text-sm text-slate-500">Web Applications & Utilities</p>
+        </div>
 
-  <!-- Header -->
-  <header class="border-b bg-white/80 backdrop-blur sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-      <div>
-        <h1 class="text-2xl font-bold">
-          🛠️ kawa0x0A Tools
-        </h1>
-        <p class="text-sm text-slate-500">
-          Web Applications & Utilities
-        </p>
+        <a
+          href="https://github.com/kawa0x0A"
+          target="_blank"
+          class="hidden sm:inline-flex rounded-lg bg-slate-900 text-white px-4 py-2 hover:bg-slate-700 transition"
+        >
+          GitHub
+        </a>
       </div>
+    </header>
 
-      <a
-        href="https://github.com/kawa0x0A"
-        target="_blank"
-        class="hidden sm:inline-flex rounded-lg bg-slate-900 text-white px-4 py-2 hover:bg-slate-700 transition"
-      >
-        GitHub
-      </a>
-    </div>
-  </header>
+    <!-- Hero -->
+    <section class="max-w-6xl mx-auto px-4 pt-12 pb-8">
+      <h2 class="text-4xl font-bold leading-tight">My Web Tools</h2>
 
-  <!-- Hero -->
-  <section class="max-w-6xl mx-auto px-4 pt-12 pb-8">
-    <h2 class="text-4xl font-bold leading-tight">
-      My Web Tools
-    </h2>
+      <p class="mt-4 text-slate-600 max-w-2xl">
+        AI、開発支援、ユーティリティなど、ブラウザだけで利用できる Webツールを公開しています。
+      </p>
+    </section>
 
-    <p class="mt-4 text-slate-600 max-w-2xl">
-      AI、開発支援、ユーティリティなど、ブラウザだけで利用できる
-      Webツールを公開しています。
-    </p>
-
-    <input
-      type="text"
-      placeholder="ツールを検索..."
-      class="mt-8 w-full rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-    />
-  </section>
-
-  <!-- Categories -->
-  <section class="max-w-6xl mx-auto px-4">
-    <div class="flex gap-2 overflow-x-auto pb-2">
-
-      <button class="rounded-full bg-slate-900 text-white px-4 py-2 whitespace-nowrap">
-        All
-      </button>
-
-      <button class="rounded-full bg-white border px-4 py-2 whitespace-nowrap hover:bg-slate-100">
-        AI
-      </button>
-
-      <button class="rounded-full bg-white border px-4 py-2 whitespace-nowrap hover:bg-slate-100">
-        Developer
-      </button>
-
-      <button class="rounded-full bg-white border px-4 py-2 whitespace-nowrap hover:bg-slate-100">
-        Utility
-      </button>
-
-    </div>
-  </section>
-
-  <!-- Tools -->
-  <main class="max-w-6xl mx-auto px-4 py-10">
-
-    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-
-      <!-- Card -->
-      <article class="bg-white rounded-2xl shadow-sm hover:shadow-lg transition overflow-hidden">
-
-        <div class="p-6">
-
-          <div class="text-4xl">
-            🤖
-          </div>
-
-          <h3 class="mt-4 text-xl font-semibold">
-            AI Prompt Generator
-          </h3>
-
-          <p class="mt-2 text-slate-600 text-sm">
-            AI向けのプロンプトを簡単に生成できるツールです。
-          </p>
-
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="bg-blue-100 text-blue-700 rounded-full px-3 py-1 text-xs">
-              AI
-            </span>
-          </div>
-
-          <div class="mt-6 flex gap-3">
-
+    <!-- Tools -->
+    <main class="max-w-6xl mx-auto px-4 py-10">
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Card -->
+        <article class="bg-white rounded-2xl shadow p-6">
+          <div class="text-4xl">🐴</div>
+          <h3 class="mt-4 text-xl font-semibold">UmamusumeHimitsu</h3>
+          <p class="mt-2 text-slate-600">ウマ娘向けの便利ツール集</p>
+          <span class="inline-block mt-4 bg-blue-100 text-blue-700 rounded-full px-3 py-1 text-xs">Tools</span>
+          <div class="mt-6">
             <a
-              href="#"
-              class="flex-1 rounded-lg bg-blue-600 text-white text-center py-2 hover:bg-blue-700"
-            >
-              Open
-            </a>
-
-            <a
-              href="#"
-              class="rounded-lg border px-4 py-2 hover:bg-slate-100"
+              class="bg-slate-900 text-white px-4 py-2 rounded inline-block"
+              href="https://github.com/kawa0x0A/UmamusumeHimitsu"
+              target="_blank"
             >
               GitHub
             </a>
-
           </div>
-
-        </div>
-
-      </article>
-
-      <!-- Card -->
-      <article class="bg-white rounded-2xl shadow-sm hover:shadow-lg transition overflow-hidden">
-
-        <div class="p-6">
-
-          <div class="text-4xl">
-            📄
-          </div>
-
-          <h3 class="mt-4 text-xl font-semibold">
-            JSON Formatter
-          </h3>
-
-          <p class="mt-2 text-slate-600 text-sm">
-            JSONを整形・検証・コピーできる開発支援ツールです。
-          </p>
-
-          <div class="mt-4 flex gap-2">
-            <span class="bg-green-100 text-green-700 rounded-full px-3 py-1 text-xs">
-              Developer
-            </span>
-          </div>
-
-          <div class="mt-6 flex gap-3">
-
+        </article>
+        <article class="bg-white rounded-2xl shadow p-6">
+          <div class="text-4xl">📝</div>
+          <h3 class="mt-4 text-xl font-semibold">UmaTextGenerator</h3>
+          <p class="mt-2 text-slate-600">ウマ娘風テキスト生成ツール</p>
+          <span class="inline-block mt-4 bg-blue-100 text-blue-700 rounded-full px-3 py-1 text-xs">Tools</span>
+          <div class="mt-6">
             <a
-              href="#"
-              class="flex-1 rounded-lg bg-blue-600 text-white text-center py-2 hover:bg-blue-700"
-            >
-              Open
-            </a>
-
-            <a
-              href="#"
-              class="rounded-lg border px-4 py-2 hover:bg-slate-100"
+              class="bg-slate-900 text-white px-4 py-2 rounded inline-block"
+              href="https://github.com/kawa0x0A/UmaTextGenerator"
+              target="_blank"
             >
               GitHub
             </a>
-
           </div>
-
-        </div>
-
-      </article>
-
-      <!-- Card -->
-      <article class="bg-white rounded-2xl shadow-sm hover:shadow-lg transition overflow-hidden">
-
-        <div class="p-6">
-
-          <div class="text-4xl">
-            🎨
-          </div>
-
-          <h3 class="mt-4 text-xl font-semibold">
-            Color Picker
-          </h3>
-
-          <p class="mt-2 text-slate-600 text-sm">
-            HEX・RGB・HSLを確認できるカラーピッカーツールです。
-          </p>
-
-          <div class="mt-4 flex gap-2">
-            <span class="bg-orange-100 text-orange-700 rounded-full px-3 py-1 text-xs">
-              Utility
-            </span>
-          </div>
-
-          <div class="mt-6 flex gap-3">
-
+        </article>
+        <article class="bg-white rounded-2xl shadow p-6">
+          <div class="text-4xl">✨</div>
+          <h3 class="mt-4 text-xl font-semibold">MysteriousLightGenerator</h3>
+          <p class="mt-2 text-slate-600">光エフェクト生成ツール</p>
+          <span class="inline-block mt-4 bg-blue-100 text-blue-700 rounded-full px-3 py-1 text-xs">Tools</span>
+          <div class="mt-6">
             <a
-              href="#"
-              class="flex-1 rounded-lg bg-blue-600 text-white text-center py-2 hover:bg-blue-700"
-            >
-              Open
-            </a>
-
-            <a
-              href="#"
-              class="rounded-lg border px-4 py-2 hover:bg-slate-100"
+              class="bg-slate-900 text-white px-4 py-2 rounded inline-block"
+              href="https://github.com/kawa0x0A/MysteriousLightGenerator"
+              target="_blank"
             >
               GitHub
             </a>
-
           </div>
+        </article>
+        <article class="bg-white rounded-2xl shadow p-6">
+          <div class="text-4xl">📖</div>
+          <h3 class="mt-4 text-xl font-semibold">AINovelistViewer</h3>
+          <p class="mt-2 text-slate-600">AI Novel用ビューア</p>
+          <span class="inline-block mt-4 bg-blue-100 text-blue-700 rounded-full px-3 py-1 text-xs">Tools</span>
+          <div class="mt-6">
+            <a
+              class="bg-slate-900 text-white px-4 py-2 rounded inline-block"
+              href="https://github.com/kawa0x0A/AINovelistViewer"
+              target="_blank"
+            >
+              GitHub
+            </a>
+          </div>
+        </article>
+        <article class="bg-white rounded-2xl shadow p-6">
+          <div class="text-4xl">🎨</div>
+          <h3 class="mt-4 text-xl font-semibold">drag-tab-switcher</h3>
+          <p class="mt-2 text-slate-600">Stable Diffusion WebUI拡張機能</p>
+          <span class="inline-block mt-4 bg-blue-100 text-blue-700 rounded-full px-3 py-1 text-xs">
+            Stable Diffusion
+          </span>
+          <div class="mt-6">
+            <a
+              class="bg-slate-900 text-white px-4 py-2 rounded inline-block"
+              href="https://github.com/kawa0x0A/drag-tab-switcher"
+              target="_blank"
+            >
+              GitHub
+            </a>
+          </div>
+        </article>
+        <article class="bg-white rounded-2xl shadow p-6">
+          <div class="text-4xl">📦</div>
+          <h3 class="mt-4 text-xl font-semibold">NovelAI-API</h3>
+          <p class="mt-2 text-slate-600">.NET向けNovelAI APIライブラリ</p>
+          <span class="inline-block mt-4 bg-blue-100 text-blue-700 rounded-full px-3 py-1 text-xs">NuGet</span>
+          <div class="mt-6">
+            <a
+              class="bg-slate-900 text-white px-4 py-2 rounded inline-block"
+              href="https://github.com/kawa0x0A/NovelAI-API"
+              target="_blank"
+            >
+              GitHub
+            </a>
+          </div>
+        </article>
+        <article class="bg-white rounded-2xl shadow p-6">
+          <div class="text-4xl">🖼️</div>
+          <h3 class="mt-4 text-xl font-semibold">AiImageMetadataReader</h3>
+          <p class="mt-2 text-slate-600">AI画像メタデータ読み取りライブラリ</p>
+          <span class="inline-block mt-4 bg-blue-100 text-blue-700 rounded-full px-3 py-1 text-xs">NuGet</span>
+          <div class="mt-6">
+            <a
+              class="bg-slate-900 text-white px-4 py-2 rounded inline-block"
+              href="https://github.com/kawa0x0A/AiImageMetadataReader"
+              target="_blank"
+            >
+              GitHub
+            </a>
+          </div>
+        </article>
+      </div>
+    </main>
 
-        </div>
+    <!-- Footer -->
+    <footer class="border-t mt-16">
+      <div class="max-w-6xl mx-auto px-4 py-8 text-center text-sm text-slate-500">
+        © 2026 kawa0x0A · Built with Tailwind CSS
+      </div>
+    </footer>
 
-      </article>
-
-    </div>
-
-  </main>
-
-  <!-- Footer -->
-  <footer class="border-t mt-16">
-    <div class="max-w-6xl mx-auto px-4 py-8 text-center text-sm text-slate-500">
-      © 2026 kawa0x0A · Built with Tailwind CSS
-    </div>
-  </footer>
-
-  <script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', async () => {
-      try {
-        await navigator.serviceWorker.register('./sw.js');
-        console.log('Service Worker registered');
-      } catch (err) {
-        console.error(err);
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', async () => {
+          try {
+            await navigator.serviceWorker.register('./sw.js');
+            console.log('Service Worker registered');
+          } catch (err) {
+            console.error(err);
+          }
+        });
       }
-    });
-  }
-  </script>
-
-</body>
+    </script>
+  </body>
 </html>
